@@ -36,3 +36,4 @@ class Consultation extends Model
         return $this -> hasMany('App\Models\MasterData\Appointment', 'consultation_id');
 }
 }
+

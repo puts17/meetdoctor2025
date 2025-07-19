@@ -38,7 +38,7 @@ class Doctor extends Model
         // 3 parameters (path app, field foreign key, field primary key)
         return $this->belongsTo('App\Models\MasterData\Specialist', 'specialist_id', 'id');
     }
-
+    
     // one to many relationship with appointment
     public function appointment()
     {

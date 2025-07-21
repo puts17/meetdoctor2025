@@ -18,6 +18,7 @@ class CreateRoleUserTable extends Migration
             $table->foreignId('role_id')->nullable()->index('fk_role_user_to_role');
             $table->foreignId('user_id')->nullable()->index('fk_role_user_to_users');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

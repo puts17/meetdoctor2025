@@ -17,6 +17,7 @@ class CreateConsultationTable extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

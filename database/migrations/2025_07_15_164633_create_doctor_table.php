@@ -20,6 +20,7 @@ class CreateDoctorTable extends Migration
             $table->string('fee');
             $table->longText('photo')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

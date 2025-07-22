@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Strorage;
 use Symfony\Component\HttpFoundation\Response;
 
 
+
 // use everything here
 // use gate;
 use Auth;
@@ -39,7 +40,7 @@ class AppointmentController extends Controller
     public function index()
     {
         //
-        return view('pages.frontsite.apoointment.index');
+        return view('pages.frontsite.appointment.index');
     }
 
     /**

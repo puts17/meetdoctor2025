@@ -14,7 +14,7 @@
     <body>
 
         @include('components.frontsite.header')
-            @yield('content')
+            @yield('content')~
 
         @include('components.frontsite.footer')
         

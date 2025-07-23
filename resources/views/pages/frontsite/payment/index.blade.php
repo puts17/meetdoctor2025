@@ -341,7 +341,7 @@
                 class="bg-[#0D63F3] text-white px-10 py-3 rounded-full text-center"
                 x-show="payment.length"
               >
-                Pay Now
+                Bayar Sekarang
               </a>
 
               <!--
@@ -351,7 +351,7 @@
                 x-show="!payment.length"
                 class="bg-[#C0CADA] text-[#808997] cursor-not-allowed px-10 py-3 rounded-full text-center"
               >
-                Pay Now
+                Bayar Sekarang
               </span>
             </div>
           </form>

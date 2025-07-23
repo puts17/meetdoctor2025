@@ -166,7 +166,7 @@
               </div>
             </a>
 
-            <a href="{{url ('appointment.index')}}" class="group">
+            <a href="{{url ('appointment')}}" class="group">
               <div class="relative z-10 w-full h-[350px] rounded-2xl overflow-hidden">
                 <img src="{{asset ('/assets/frontsite/images/doctor-2.png')}}" class="w-full h-full bg-center bg-no-repeat object-cover object-center" alt="Doctor 1">
                 <div class="opacity-0 group-hover:opacity-100 transition-all ease-in absolute inset-0 bg-[#0D63F3] bg-opacity-70 flex justify-center items-center">
@@ -185,7 +185,7 @@
               </div>
             </a>
 
-            <a href="src/pages/subject-consultation.html" class="group">
+            <a href="{{url ('appointment')}}" class="group">
               <div class="relative z-10 w-full h-[350px] rounded-2xl overflow-hidden">
                 <img src="{{asset ('/assets/frontsite/images/doctor-3.png')}}" class="w-full h-full bg-center bg-no-repeat object-cover object-center" alt="Doctor 1">
                 <div class="opacity-0 group-hover:opacity-100 transition-all ease-in absolute inset-0 bg-[#0D63F3] bg-opacity-70 flex justify-center items-center">
@@ -204,7 +204,7 @@
               </div>
             </a>
 
-            <a href="src/pages/subject-consultation.html" class="group">
+            <a href="{{url ('appointment')}}" class="group">
               <div class="relative z-10 w-full h-[350px] rounded-2xl overflow-hidden">
                 <img src="{{asset ('/assets/frontsite/images/doctor-4.png')}}" class="w-full h-full bg-center bg-no-repeat object-cover object-center" alt="Doctor 1">
                 <div class="opacity-0 group-hover:opacity-100 transition-all ease-in absolute inset-0 bg-[#0D63F3] bg-opacity-70 flex justify-center items-center">

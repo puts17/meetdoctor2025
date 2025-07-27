@@ -9,7 +9,11 @@
     </head>
     
     <body>
-        @yield('content')~
+        @yield('content')
+
+         @stack('before-script')
+            @include('includes.frontsite.script')
+        @stack('after-script')
     </body>
 
 </html>

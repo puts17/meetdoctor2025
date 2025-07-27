@@ -4,11 +4,25 @@ namespace App\Http\Controllers\Backsite;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\MasterData\Specialist;
 
-class DashboardController extends Controller
+// use library here
+use Illuminate\Support\Facades\Storage;
+use Symfony\Component\HttpFoundation\Response;
+
+// request
+use App\Http\Requests\Specialist\StoreSpecialistRequest;
+use App\Http\Requests\Specialist\UpdateSpecialistRequest;
+
+// use everything here
+// use gate;
+use Auth;
+
+
+class SpecialistController extends Controller
 {
 
-     /**
+    /**
      * Create a new controller instance.
      *
      * @return void
@@ -26,7 +40,10 @@ class DashboardController extends Controller
     public function index()
     {
         //
-        return view('pages.backsite.dashboard.index');
+        $specialist = Specialist::orderBy('created_at', 'desc')->get();
+
+        dd($specialist);
+        return view('pages.backsite.master-data.specialist.index', compact('specialist'));
     }
 
     /**
@@ -48,8 +65,14 @@ class DashboardController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        return abort(404);
+        // get all request from frontsite
+        $data = $request->all();
+
+        // store to database
+        $specialist = Specialist::create($data);
+
+        alert()->success('Success Massage', 'Successfully added new Speciliast');
+        return redirect()->route('backsite.specialist.index');
     }
 
     /**
@@ -58,10 +81,10 @@ class DashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Specialist $specialist) 
     {
         //
-        return abort(404);
+        return view('pages.backsite.master-data.specialist.show' , compact('specialist'));
     }
 
     /**

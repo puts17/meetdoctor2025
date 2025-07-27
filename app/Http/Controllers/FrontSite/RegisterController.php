@@ -1,14 +1,27 @@
 <?php
 
-namespace App\Http\Controllers\Backsite;
+namespace App\Http\Controllers\Frontsite;
 
 use App\Http\Controllers\Controller;
+
+// use library here
+use Illuminate\Support\Facades\Storage;
+use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
-{
+// use everything here
+// use Gate;
+use Auth;
 
-     /**
+// use model here
+use App\Models\User;
+
+// thirdparty package
+
+class RegisterController extends Controller
+{
+    /**
      * Create a new controller instance.
      *
      * @return void
@@ -25,8 +38,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //
-        return view('pages.backsite.dashboard.index');
+        return view('pages.frontsite.success.signup-success');
     }
 
     /**
@@ -36,7 +48,6 @@ class DashboardController extends Controller
      */
     public function create()
     {
-        //
         return abort(404);
     }
 
@@ -48,7 +59,6 @@ class DashboardController extends Controller
      */
     public function store(Request $request)
     {
-        //
         return abort(404);
     }
 
@@ -60,7 +70,6 @@ class DashboardController extends Controller
      */
     public function show($id)
     {
-        //
         return abort(404);
     }
 
@@ -72,7 +81,6 @@ class DashboardController extends Controller
      */
     public function edit($id)
     {
-        //
         return abort(404);
     }
 
@@ -85,7 +93,6 @@ class DashboardController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
         return abort(404);
     }
 
@@ -97,7 +104,6 @@ class DashboardController extends Controller
      */
     public function destroy($id)
     {
-        //
         return abort(404);
     }
 }

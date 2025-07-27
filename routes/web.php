@@ -6,10 +6,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontsite\LandingController;
 use App\Http\Controllers\Frontsite\AppointmentController;
 use App\Http\Controllers\Frontsite\PaymentController;
+use App\Http\Controllers\Frontsite\RegisterController;
 
 // backsite
 use App\Http\Controllers\Backsite\DashboardController;
-use App\Http\Controllers\Backsite\DashboardController as BacksiteDashboardController;
+use App\Http\Controllers\Backsite\TypeUserController;
+use App\Http\Controllers\Backsite\SpecialistController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,17 +31,27 @@ Route::resource('/', LandingController::class);
 // return view('dashboard');
 
     Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
-         // appointment page
+        // appointment page
         Route::resource('appointment', AppointmentController::class);
 
         // payment
         Route::resource('payment', PaymentController::class);
+
+        // sign-up-success
+        Route::resource('register_success', RegisterController::class);
     });
 
 
 Route::group(['prefix' => 'backsite', 'as' => 'backsite.', 'middleware' => ['auth:sanctum', 'verified']], function () {
 
+        // dashboard
         Route::resource('dashboard', DashboardController::class);
+
+        // type_user
+        Route::resource('type_user', TypeUserController::class);
+
+         // Specialist
+        Route::resource('specialist', SpecialistController::class);
     
 });
 

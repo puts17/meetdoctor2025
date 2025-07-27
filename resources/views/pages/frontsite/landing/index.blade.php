@@ -35,18 +35,7 @@
 
               <!-- Label New -->
               <h1>
-                <div class="flex items-center">
-                  <span
-                    class="text-white text-xs sm:text-sm font-medium bg-[#2AB49B] rounded-full px-8 py-2"
-                  >
-                    New
-                  </span>
-                  <span
-                    class="text-[#1E2B4F] text-[11px] sm:text-sm bg-[#F2F6FE] rounded-r-full px-8 py-2 relative -z-10 -ml-4"
-                  >
-                    Emergency call feature updated
-                  </span>
-                </div>
+                
                 <span class="mt-6 block text-4xl font-semibold sm:text-5xl">
                   <span class="block text-[#1E2B4F] leading-normal"
                     >Meet Your Doctor. <br />
@@ -92,7 +81,6 @@
               <!-- CTA Button -->
               <div class="grid lg:flex flex-wrap mt-20 gap-5">
                 <a href="{{route ('register')}}" class="text-white text-lg font-medium text-center bg-[#0D63F3] rounded-full px-12 py-3"> Sign Up </a>
-                <a href="#" class="text-[#1E2B4F] text-lg font-medium text-center bg-[#F2F6FE] rounded-full px-16 py-3"> Story </a>
               </div>
               <!-- CTA Button -->       
             </div>

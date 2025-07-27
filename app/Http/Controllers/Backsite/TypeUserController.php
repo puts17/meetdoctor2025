@@ -5,10 +5,22 @@ namespace App\Http\Controllers\Backsite;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+// use library here
+use Illuminate\Support\Facades\Strorage;
+use Symfony\Component\HttpFoundation\Response;
+
+// model here
+use App\Models\MasterData\TypeUser;
+
+
+// use everything here
+// use gate;
+use Auth;
+
+class TypeUserController extends Controller
 {
 
-     /**
+    /**
      * Create a new controller instance.
      *
      * @return void
@@ -26,7 +38,8 @@ class DashboardController extends Controller
     public function index()
     {
         //
-        return view('pages.backsite.dashboard.index');
+        $type_user = TypeUser::all();
+        return view('pages.backsite.management-access.user-type.index', compact('type_user'));
     }
 
     /**
@@ -86,7 +99,6 @@ class DashboardController extends Controller
     public function update(Request $request, $id)
     {
         //
-        return abort(404);
     }
 
     /**
